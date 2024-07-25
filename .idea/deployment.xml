@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PublishConfigData" serverName="dell@10.91.73.148:22 password" remoteFilesAllowedToDisappearOnAutoupload="false" confirmBeforeUploading="false">
+    <option name="confirmBeforeUploading" value="false" />
+    <serverData>
+      <paths name="dell@10.91.73.148:22 password">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/E:/Download/LocalSendRecieve/ultralytics" local="$PROJECT_DIR$" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="grr-yolov8">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/home/grr/chenhao/ultralytics" local="$PROJECT_DIR$" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="xwj-yolov8">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/home/xwj/chenhao/ultralytics" local="$PROJECT_DIR$" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="xwj-yolov9">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+    </serverData>
+  </component>
+</project>

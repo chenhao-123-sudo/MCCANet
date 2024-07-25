@@ -1,0 +1,88 @@
+2023-07-11 08:47:10,159 INFO    MainThread:8640 [wandb_setup.py:_flush():76] Current SDK version is 0.15.4
+2023-07-11 08:47:10,159 INFO    MainThread:8640 [wandb_setup.py:_flush():76] Configure stats pid to 8640
+2023-07-11 08:47:10,159 INFO    MainThread:8640 [wandb_setup.py:_flush():76] Loading settings from C:\Users\chenhao\.config\wandb\settings
+2023-07-11 08:47:10,159 INFO    MainThread:8640 [wandb_setup.py:_flush():76] Loading settings from F:\Project\PythonProject\ultralytics\wandb\settings
+2023-07-11 08:47:10,159 INFO    MainThread:8640 [wandb_setup.py:_flush():76] Loading settings from environment variables: {}
+2023-07-11 08:47:10,159 INFO    MainThread:8640 [wandb_setup.py:_flush():76] Applying setup settings: {'_disable_service': False}
+2023-07-11 08:47:10,160 INFO    MainThread:8640 [wandb_setup.py:_flush():76] Inferring run settings from compute environment: {'program_relpath': 'main_local.py', 'program': 'F:\\Project\\PythonProject\\ultralytics\\main_local.py'}
+2023-07-11 08:47:10,160 INFO    MainThread:8640 [wandb_init.py:_log_setup():507] Logging user logs to F:\Project\PythonProject\ultralytics\wandb\run-20230711_084710-k44t7nmw\logs\debug.log
+2023-07-11 08:47:10,160 INFO    MainThread:8640 [wandb_init.py:_log_setup():508] Logging internal logs to F:\Project\PythonProject\ultralytics\wandb\run-20230711_084710-k44t7nmw\logs\debug-internal.log
+2023-07-11 08:47:10,161 INFO    MainThread:8640 [wandb_init.py:init():547] calling init triggers
+2023-07-11 08:47:10,161 INFO    MainThread:8640 [wandb_init.py:init():554] wandb.init called with sweep_config: {}
+config: {'task': 'detect', 'mode': 'train', 'model': 'ultralytics/models/v8/yolov8_CSAT.yaml', 'data': 'ultralytics/datasets/VisDrone_local.yaml', 'epochs': 200, 'patience': 50, 'batch': 4, 'imgsz': 640, 'save': True, 'save_period': -1, 'cache': False, 'device': None, 'workers': 0, 'project': None, 'name': None, 'exist_ok': False, 'pretrained': True, 'optimizer': 'auto', 'verbose': True, 'seed': 0, 'deterministic': True, 'single_cls': False, 'rect': False, 'cos_lr': False, 'close_mosaic': 0, 'resume': False, 'amp': True, 'fraction': 1.0, 'profile': False, 'overlap_mask': True, 'mask_ratio': 4, 'dropout': 0.0, 'val': True, 'split': 'val', 'save_json': False, 'save_hybrid': False, 'conf': None, 'iou': 0.7, 'max_det': 300, 'half': False, 'dnn': False, 'plots': True, 'source': None, 'show': False, 'save_txt': False, 'save_conf': False, 'save_crop': False, 'show_labels': True, 'show_conf': True, 'vid_stride': 1, 'line_width': None, 'visualize': False, 'augment': False, 'agnostic_nms': False, 'classes': None, 'retina_masks': False, 'boxes': True, 'format': 'torchscript', 'keras': False, 'optimize': False, 'int8': False, 'dynamic': False, 'simplify': False, 'opset': None, 'workspace': 4, 'nms': False, 'lr0': 0.001, 'lrf': 0.01, 'momentum': 0.937, 'weight_decay': 0.0005, 'warmup_epochs': 3.0, 'warmup_momentum': 0.8, 'warmup_bias_lr': 0.1, 'box': 7.5, 'cls': 0.5, 'dfl': 1.5, 'pose': 12.0, 'kobj': 1.0, 'label_smoothing': 0.0, 'nbs': 64, 'hsv_h': 0.015, 'hsv_s': 0.7, 'hsv_v': 0.4, 'degrees': 0.0, 'translate': 0.1, 'scale': 0.5, 'shear': 0.0, 'perspective': 0.0, 'flipud': 0.0, 'fliplr': 0.5, 'mosaic': 1.0, 'mixup': 0.0, 'copy_paste': 0.0, 'cfg': None, 'v5loader': False, 'tracker': 'botsort.yaml', 'save_dir': 'runs\\detect\\train'}
+2023-07-11 08:47:10,161 INFO    MainThread:8640 [wandb_init.py:init():596] starting backend
+2023-07-11 08:47:10,161 INFO    MainThread:8640 [wandb_init.py:init():600] setting up manager
+2023-07-11 08:47:10,166 INFO    MainThread:8640 [backend.py:_multiprocessing_setup():106] multiprocessing start_methods=spawn, using: spawn
+2023-07-11 08:47:10,196 INFO    MainThread:8640 [wandb_init.py:init():606] backend started and connected
+2023-07-11 08:47:10,249 INFO    MainThread:8640 [wandb_init.py:init():703] updated telemetry
+2023-07-11 08:47:10,299 INFO    MainThread:8640 [wandb_init.py:init():736] communicating run to backend with 60.0 second timeout
+2023-07-11 08:47:38,785 INFO    Thread-7  :8640 [retry.py:__call__():172] Retry attempt failed:
+Traceback (most recent call last):
+  File "D:\DevTools\Anaconda\envs\yolov8\lib\site-packages\urllib3\connection.py", line 174, in _new_conn
+    conn = connection.create_connection(
+  File "D:\DevTools\Anaconda\envs\yolov8\lib\site-packages\urllib3\util\connection.py", line 95, in create_connection
+    raise err
+  File "D:\DevTools\Anaconda\envs\yolov8\lib\site-packages\urllib3\util\connection.py", line 85, in create_connection
+    sock.connect(sa)
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\DevTools\Anaconda\envs\yolov8\lib\site-packages\urllib3\connectionpool.py", line 703, in urlopen
+    httplib_response = self._make_request(
+  File "D:\DevTools\Anaconda\envs\yolov8\lib\site-packages\urllib3\connectionpool.py", line 386, in _make_request
+    self._validate_conn(conn)
+  File "D:\DevTools\Anaconda\envs\yolov8\lib\site-packages\urllib3\connectionpool.py", line 1042, in _validate_conn
+    conn.connect()
+  File "D:\DevTools\Anaconda\envs\yolov8\lib\site-packages\urllib3\connection.py", line 363, in connect
+    self.sock = conn = self._new_conn()
+  File "D:\DevTools\Anaconda\envs\yolov8\lib\site-packages\urllib3\connection.py", line 179, in _new_conn
+    raise ConnectTimeoutError(
+urllib3.exceptions.ConnectTimeoutError: (<urllib3.connection.HTTPSConnection object at 0x000001BABD1BC520>, 'Connection to api.wandb.ai timed out. (connect timeout=10)')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\DevTools\Anaconda\envs\yolov8\lib\site-packages\requests\adapters.py", line 489, in send
+    resp = conn.urlopen(
+  File "D:\DevTools\Anaconda\envs\yolov8\lib\site-packages\urllib3\connectionpool.py", line 787, in urlopen
+    retries = retries.increment(
+  File "D:\DevTools\Anaconda\envs\yolov8\lib\site-packages\urllib3\util\retry.py", line 592, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.wandb.ai', port=443): Max retries exceeded with url: /graphql (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x000001BABD1BC520>, 'Connection to api.wandb.ai timed out. (connect timeout=10)'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\DevTools\Anaconda\envs\yolov8\lib\site-packages\wandb\sdk\lib\retry.py", line 131, in __call__
+    result = self._call_fn(*args, **kwargs)
+  File "D:\DevTools\Anaconda\envs\yolov8\lib\site-packages\wandb\sdk\internal\internal_api.py", line 320, in execute
+    return self.client.execute(*args, **kwargs)  # type: ignore
+  File "D:\DevTools\Anaconda\envs\yolov8\lib\site-packages\wandb\vendor\gql-0.2.0\wandb_gql\client.py", line 52, in execute
+    result = self._get_result(document, *args, **kwargs)
+  File "D:\DevTools\Anaconda\envs\yolov8\lib\site-packages\wandb\vendor\gql-0.2.0\wandb_gql\client.py", line 60, in _get_result
+    return self.transport.execute(document, *args, **kwargs)
+  File "D:\DevTools\Anaconda\envs\yolov8\lib\site-packages\wandb\sdk\lib\gql_request.py", line 55, in execute
+    request = self.session.post(self.url, **post_args)
+  File "D:\DevTools\Anaconda\envs\yolov8\lib\site-packages\requests\sessions.py", line 635, in post
+    return self.request("POST", url, data=data, json=json, **kwargs)
+  File "D:\DevTools\Anaconda\envs\yolov8\lib\site-packages\requests\sessions.py", line 587, in request
+    resp = self.send(prep, **send_kwargs)
+  File "D:\DevTools\Anaconda\envs\yolov8\lib\site-packages\requests\sessions.py", line 701, in send
+    r = adapter.send(request, **kwargs)
+  File "D:\DevTools\Anaconda\envs\yolov8\lib\site-packages\requests\adapters.py", line 553, in send
+    raise ConnectTimeout(e, request=request)
+requests.exceptions.ConnectTimeout: HTTPSConnectionPool(host='api.wandb.ai', port=443): Max retries exceeded with url: /graphql (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x000001BABD1BC520>, 'Connection to api.wandb.ai timed out. (connect timeout=10)'))
+2023-07-11 08:48:02,949 WARNING MainThread:8640 [wandb_init.py:init():1174] interrupted
+Traceback (most recent call last):
+  File "D:\DevTools\Anaconda\envs\yolov8\lib\site-packages\wandb\sdk\wandb_init.py", line 1152, in init
+  File "D:\DevTools\Anaconda\envs\yolov8\lib\site-packages\wandb\sdk\wandb_init.py", line 739, in init
+  File "D:\DevTools\Anaconda\envs\yolov8\lib\site-packages\wandb\sdk\lib\mailbox.py", line 283, in wait
+  File "D:\DevTools\Anaconda\envs\yolov8\lib\site-packages\wandb\sdk\lib\mailbox.py", line 130, in _get_and_clear
+  File "D:\DevTools\Anaconda\envs\yolov8\lib\site-packages\wandb\sdk\lib\mailbox.py", line 126, in _wait
+  File "D:\DevTools\Anaconda\envs\yolov8\lib\threading.py", line 558, in wait
+    signaled = self._cond.wait(timeout)
+  File "D:\DevTools\Anaconda\envs\yolov8\lib\threading.py", line 306, in wait
+    gotit = waiter.acquire(True, timeout)
+KeyboardInterrupt
