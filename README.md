@@ -18,7 +18,7 @@
   </div>
   <br>
 
-MFRENet is a deep network model specially used to process UAV images. Compared with YOLOv8, MFRENET achieves higher recognition accuracy with little change in parameter number and computation amount.
+MCCANet is a deep network model specifically designed to process drone images. Compared with YOLOv8, MCCANet achieves higher recognition accuracy with fewer parameters and less computation.
 
 </a>
 
