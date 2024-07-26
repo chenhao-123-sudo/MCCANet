@@ -1,8 +1,4 @@
 <div align="center">
-  <p>
-    <a href="https://ultralytics.com/yolov8" target="_blank">
-      <img width="100%" src="https://raw.githubusercontent.com/ultralytics/assets/main/yolov8/banner-yolov8.png"></a>
-  </p>
 
 [English](README.md) | [简体中文](README.zh-CN.md)
 <br>
