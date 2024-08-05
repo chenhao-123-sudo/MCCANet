@@ -11,8 +11,6 @@ scales: # model compound scaling constants, i.e. 'model=yolov8n.yaml' will call 
 #  l: [ 1.00, 1.00, 512 ]   # YOLOv8l summary: 365 layers, 43691520 parameters, 43691504 gradients, 165.7 GFLOPs
 #  x: [ 1.00, 1.25, 512 ]   # YOLOv8x summary: 365 layers, 68229648 parameters, 68229632 gradients, 258.5 GFLOPs
 
-# 第一篇论文MFREnNet网络结构
-# YOLOv8.0n backbone
 backbone:
   # [from, repeats, module, args]
   - [ -1, 1, Conv, [ 64, 3, 2 ] ]  # 0-P1/2      320*320
@@ -26,7 +24,6 @@ backbone:
   - [ -1, 3, C2f, [ 1024, True ] ]
   - [ -1, 1, CAPCE, [ 1024, 5 ] ]  # 9       20*20
 
-#  5.  修改检测头，由于visdrone数据集中小目标较多，故去除P5层，只检测P2-4层
 head:
   - [ -1, 1, nn.Upsample, [ None, 2, 'nearest' ] ]  #10       40*40
   - [ [ -1, 6 ], 1, Concat, [ 1 ] ]  # cat backbone P4        40*40
@@ -38,14 +35,14 @@ head:
 
   - [ -1, 1, nn.Upsample, [ None, 2, 'nearest' ] ]             #160*160
   - [ [ -1, 2 ], 1, Concat, [ 1 ] ]  # cat backbone P3         160*160
-  - [ -1, 3, C2f, [ 128 ] ]  # 18(P2/4-xsmall)                 160*160
+  - [ -1, 2, C2f, [ 128 ] ]  # 18(P2/4-xsmall)                 160*160
 
   - [ -1, 1, Conv, [ 256, 3, 2 ] ]                             #80*80
   - [ [ -1, 4, 15 ], 1, Concat, [ 1 ] ]  # cat head P4         80*80
-  - [ -1, 3, C2f, [ 256 ] ]  # 21 (P3/8-small)                 80*80
+  - [ -1, 2, C2f, [ 256 ] ]  # 21 (P3/8-small)                 80*80
 
   - [ -1, 1, Conv, [ 512, 3, 2 ] ]                             #40*40
   - [ [ -1, 6, 12 ], 1, Concat, [ 1 ] ]  # cat head P5         #40*40
-  - [ -1, 3, LWPF, [ 512 ] ]  # 24 (P4/16-medium)            40*40
+  - [ -1, 2, LWPF, [ 512 ] ]  # 24 (P4/16-medium)            40*40
 
   - [ [ 18, 21, 24 ], 1, Detect, [ nc ] ]  # Detect(P2, P3, P4,)
